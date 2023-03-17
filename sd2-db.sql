@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `test_table`
 --
 CREATE TABLE user_details(
- Name      VARCHAR(10) NOT NULL,
+ Name      VARCHAR(10) NOT NULL PRIMARY KEY,
  phone     integer     NOT NULL,
  Email     VARCHAR(30) NOT NULL,
  Address   VARCHAR(50) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE user_details(
  );
  
  CREATE TABLE property_Details(
- property_ID         VARCHAR(10) NOT NULL,
+ property_ID         VARCHAR(10) NOT NULL PRIMARY KEY,
  property_Location   VARCHAR(30) NOT NULL,
  property_type       VARCHAR(30) NOT NULL,
  property_category   VARCHAR(50) NOT NULL,
