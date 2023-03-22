@@ -24,6 +24,7 @@ app.get("/all-user", function(req, res) {
         console.log(results);
         res.json(results);
     });
+});
 // Create a route for testing the db
 app.get("/db_test1", function(req, res) {
     // Assumes a table called test_table exists in your database
