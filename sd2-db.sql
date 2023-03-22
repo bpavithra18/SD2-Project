@@ -45,6 +45,8 @@ CREATE TABLE user_details(
  property_cost       integer
  );
 
+ INSERT INTO user_details(Name,phone,Email,Address,DOB,Gender,psd) VALUES ("kishore",07867239,"kishore@gmail.com","hounslow","1997:07:17","male","123"), ("yuva",078655392,"yuva@gmail.com","London","1997:07:17","male","123"), ("revanth",078442392,"yuva@gmail.com","London","1997:07:17","male","123"), ("sarath",078645392,"yuva@gmail.com","London","1997:07:17","male","123"), ("pavithra",078672392,"yuva@gmail.com","London","1997:07:17","female","123"), ("dindima",078332392,"revanth@gmail.com","uxbridge","1997:07:17","female","123");
+
 
 /*CREATE TABLE `test_table` (
   `id` int NOT NULL,
