@@ -14,7 +14,16 @@ const db = require('./services/db');
 app.get("/", function(req, res) {
     res.send("Hello world!");
 });
-
+// Task 1 JSON formatted listing of students
+app.get("/all-user", function(req, res) {
+    var sql = 'select * from user_details';
+    // As we are not inside an async function we cannot use await
+    // So we use .then syntax to ensure that we wait until the 
+    // promise returned by the async function is resolved before we proceed
+    db.query(sql).then(results => {
+        console.log(results);
+        res.json(results);
+    });
 // Create a route for testing the db
 app.get("/db_test1", function(req, res) {
     // Assumes a table called test_table exists in your database
