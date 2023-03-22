@@ -33,8 +33,7 @@ CREATE TABLE user_details(
  Address   VARCHAR(50) NOT NULL,
  psd       VARCHAR(30) NOT NULL,
  DOB       date        NOT NULL,
- Gender    VARCHAR(20) NOT NULL,
- User_Type VARCHAR(10) NOT NULL
+ Gender    VARCHAR(20) NOT NULL
  );
  
  CREATE TABLE property_Details(
