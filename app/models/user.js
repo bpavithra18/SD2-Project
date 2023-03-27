@@ -2,10 +2,22 @@
 const db = require('./../services/db');
 
 class User {
-    // Student ID
+    // user ID
     id;
-    // Student name
+    // user name
     name;
+    // user phone
+    phone;
+    // user email
+    email;
+    // user address;
+    address;
+    // user dob
+    dob;
+    // user phone
+    phone;
+    // user gender
+    gender;
 
 
     constructor(id) {
