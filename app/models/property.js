@@ -25,5 +25,5 @@ class User {
 }
 
 module.exports = {
-    User
+    Property
 }
