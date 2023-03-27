@@ -20,6 +20,7 @@ const db = require('./services/db');
 // Get the models
 const { Student } = require("./models/student");
 const { User } = require("./models/user");
+const { Property } = require("./models/property");
 
 // Create a route for root - /
 app.get("/", function(req, res) {
@@ -77,7 +78,7 @@ app.get("/all-properties-formatted", function(req, res) {
     });
 });
 
-// Task 3 single student page
+// Task 3 single user page
 app.get("/user-single/:id", async function (req, res) {
     var Uid = req.params.id;
     // Create a student class with the ID passed
@@ -86,6 +87,15 @@ app.get("/user-single/:id", async function (req, res) {
     console.log(user);
     res.render('user', {user:user});
 });
+
+// Task 3 single property page
+app.get("/user-property/:id", async function (req, res) {
+    var Pid = req.params.id;
+    // Create a student class with the ID passed
+    var property = new property(Pid);
+    await user.getPropertyDetails();
+    console.log(property);
+    res.render('property', {property:property});
 /*
 // Task 3 single programme page
 app.get("/user-single/:id", function (req, res) {

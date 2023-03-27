@@ -1,0 +1,12 @@
+extends layout
+block content
+    h1 user page for: #{property.location}
+    p The ID for the property is: #{property.id}
+    table(border=1)
+        for id in property
+            tr  
+                td #{property.id}
+                td 
+                    a(href='/user-property/' + property.id) #{property.name}
+
+
