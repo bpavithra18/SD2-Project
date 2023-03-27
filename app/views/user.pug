@@ -1,0 +1,12 @@
+extends layout
+block content
+    h1 user page for: #{user.name}
+    p The ID for the user is: #{user.id}
+    table(border=1)
+        for id in user
+            tr  
+                td #{user.id}
+                td 
+                    a(href='/user-single/' + user.id) #{user.name}
+
+
