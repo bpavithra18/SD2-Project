@@ -14,8 +14,6 @@ class User {
     address;
     // user dob
     dob;
-    // user phone
-    phone;
     // user gender
     gender;
 
@@ -30,6 +28,11 @@ class User {
             var sql = "SELECT * from users where id = ?"
             const results = await db.query(sql, [this.id]);
             this.name = results[0].name;
+            this.phone = results[0].phone;
+            this.email = results[0].email;
+            this.address = results[0].address;
+            this.dob = results[0].dob;
+            this.gender = results[0].gender;
         }
 
     }
