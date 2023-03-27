@@ -91,9 +91,9 @@ app.get("/user-single/:id", async function (req, res) {
 // Task 3 single property page
 app.get("/user-property/:id", async function (req, res) {
     var Pid = req.params.id;
-    // Create a student class with the ID passed
+    // Create a property class with the ID passed
     var property = new property(Pid);
-    await user.getPropertyDetails();
+    await property.getPropertyDetails();
     console.log(property);
     res.render('property', {property:property});
 /*
