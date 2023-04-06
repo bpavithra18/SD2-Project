@@ -1,7 +1,7 @@
 // Get the functions in the db.js file to use
 const db = require('./../services/db');
 
-class User {
+class Property {
     // property ID
     id;
     // property location

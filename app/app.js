@@ -18,7 +18,6 @@ const db = require('./services/db');
 
 
 // Get the models
-const { Student } = require("./models/student");
 const { User } = require("./models/user");
 const { Property } = require("./models/property");
 
@@ -89,10 +88,10 @@ app.get("/user-single/:id", async function (req, res) {
 });
 
 // Task 3 single property page
-app.get("/user-property/:id", async function (req, res) {
+app.get("/property-single/:id", async function (req, res) {
     var Pid = req.params.id;
     // Create a property class with the ID passed
-    var property = new property(Pid);
+    var property = new Property(Pid);
     await property.getPropertyDetails();
     console.log(property);
     res.render('property', {property:property});
