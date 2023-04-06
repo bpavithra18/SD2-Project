@@ -26,28 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `test_table`
 --
-CREATE TABLE user_details(
- Name      VARCHAR(10) NOT NULL PRIMARY KEY,
- phone     integer     NOT NULL,
- Email     VARCHAR(30) NOT NULL,
- Address   VARCHAR(50) NOT NULL,
- psd       VARCHAR(30) NOT NULL,
- DOB       date        NOT NULL,
- Gender    VARCHAR(20) NOT NULL
- );
- 
- CREATE TABLE property_Details(
- property_ID         VARCHAR(10) NOT NULL PRIMARY KEY,
- property_Location   VARCHAR(30) NOT NULL,
- property_type       VARCHAR(30) NOT NULL,
- property_category   VARCHAR(50) NOT NULL,
- property_cost       integer
- );
 
- INSERT INTO user_details(Name,phone,Email,Address,DOB,Gender,psd) VALUES ("kishore",07867239,"kishore@gmail.com","hounslow","1997:07:17","male","123"), ("yuva",078655392,"yuva@gmail.com","London","1997:07:17","male","123"), ("revanth",078442392,"yuva@gmail.com","London","1997:07:17","male","123"), ("sarath",078645392,"yuva@gmail.com","London","1997:07:17","male","123"), ("pavithra",078672392,"yuva@gmail.com","London","1997:07:17","female","123"), ("dindima",078332392,"revanth@gmail.com","uxbridge","1997:07:17","female","123");
-
-
-/*CREATE TABLE `test_table` (
+CREATE TABLE `test_table` (
   `id` int NOT NULL,
   `name` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
