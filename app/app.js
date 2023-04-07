@@ -30,29 +30,13 @@ app.get("/", function(req, res) {
            'heading':'My heading', 'data':test_data});
 });
 
-
-// Task 1a JSON formatted listing of users
-app.get("/all-user", function(req, res) {
-    var sql = 'select * from users';
-    // As we are not inside an async function we cannot use await
-    // So we use .then syntax to ensure that we wait until the
-    // promise returned by the async function is resolved before we proceed
-    db.query(sql).then(results => {
-        console.log(results);
-        res.json(results);
-    });
-});
-
-// Task 1b JSON formatted listing of properties
-app.get("/all-properties", function(req, res) {
-    var sql = 'select * from property';
-    // As we are not inside an async function we cannot use await
-    // So we use .then syntax to ensure that we wait until the
-    // promise returned by the async function is resolved before we proceed
-    db.query(sql).then(results => {
-        console.log(results);
-        res.json(results);
-    });
+//creating home page
+app.get("/home", function(req, res) {
+    //
+    res.render("index");
+    
+    //
+    res.render('layout', {data:results});
 });
 
 // Task 2a display a formatted list of users
