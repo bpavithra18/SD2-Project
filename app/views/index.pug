@@ -1,6 +1,26 @@
 extends layout
-block content
+block ymp
     
-    p first paragraph xxx
-    p now lets loop 
-    
+    p welcome to your market place
+    p you can buy and rent
+    img(src='/images/property1.jpg' width='500px' height='200px')
+    <div class="my-html-code">
+    p This is some HTML code in a Pug template.
+    <a href="https://example.com">Click me
+    p Thanks for using Pug!
+	p Welcome To our Market place
+	form
+		p Login
+		label(for="username")
+		input(type="text" placeholder="Enter Username" name="username" required)
+
+		label(for="password")
+		input(type="password" placeholder="Enter Password" name="password" required)
+
+		button(type="submit")Login
+		
+		<div style="text-align:center;">
+			p Don't have an account? <a href="signup.html">Sign Up
+			p <a href="forgotpass.html">Forgot Password?
+	footer
+		p &copy; 2023 Marketplace. All rights reserved.

@@ -9,6 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 // Add static files location
 app.use(express.static("static"));
 
+app.use('/bootstrap', express.static('node_modules/bootstrap/dist'));
+
 // Use the Pug templating engine
 app.set('view engine', 'pug');
 app.set('views', './app/views');
@@ -24,10 +26,10 @@ const { Property } = require("./models/property");
 // Create a route for root - /
 app.get("/", function(req, res) {
      // Set up an array of data
-     var test_data = ['one', 'two', 'three', 'four'];
+     var test_property = ['houses', 'flats', 'villas', 'appartments'];
      // Send the array through to the template as a variable called data
      res.render("index", {'title':'My index page',
-           'heading':'My heading', 'data':test_data});
+           'heading':'My heading', 'data':test_property});
 });
 
 //creating home page
