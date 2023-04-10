@@ -114,7 +114,7 @@ app.post('/submit-form', (req, res) => {
         throw err;
       }
       console.log('Data inserted');
-      res.redirect('/');
+      res.redirect('/home');
     });
   });
 
