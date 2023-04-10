@@ -43,9 +43,9 @@ app.get("/", function(req, res) {
            'heading':'My heading', 'data':test_property});
      res.render("home", {'title':'home page',
            'heading':'My heading', 'data':test_property});
-    res.render("sell", {'title':'sell page',
+     res.render("sell", {'title':'sell page',
            'heading':'My heading', 'data':test_property});
-    res.render("buy", {'title':'buy page',
+     res.render("buy", {'title':'buy page',
            'heading':'My heading', 'data':test_property});
 });
 
