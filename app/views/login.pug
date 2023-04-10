@@ -1,0 +1,34 @@
+extends layout
+block signin
+    doctype html
+    html
+        head
+            title Login Page
+        body
+            header
+            img(src="/images/logo.jpg", alt="Marketplace Logo", width="200", height="100")
+            h1 Welcome
+                br
+                | To
+                br
+                | Your Marketplace
+
+            form
+                h2 Login
+                label(for="username") Username
+                input(type="text", placeholder="Enter Username", name="username", required)
+                label(for="password") Password
+                input(type="password", placeholder="Enter Password", name="password", required)
+                button(type="submit") Login
+                div(style="text-align:center;")
+                    p Don't have an account? 
+                    a(href="signup") Sign Up
+                    p
+                    a(href="forgotpassword") Forgot Password?
+
+            footer
+            p &copy; 2023 Marketplace. All rights reserved.
+
+
+
+    

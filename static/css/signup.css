@@ -1,0 +1,45 @@
+body {
+    background-image: url('https://1.bp.blogspot.com/-JZUpRvRdC0c/WmSCHgN7ikI/AAAAAAAANag/c4V4XRZjj9gji2i9QfqNxHY4_1C33yxMACLcBGAs/s1600/White%2BHome%2BFacade%2Bwith%2BConcrete%252C%2BWood%2Band%2BGlass%2BDetails%2B1.jpg');
+    height: 100%;
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+}
+h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #333333;
+}
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    background-color: #45a049;
+}

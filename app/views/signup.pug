@@ -1,0 +1,29 @@
+extends layout
+block signup
+    doctype html
+    html
+        head
+            title Sign Up Page
+        body
+            header
+                img(src='/images/logo.jpg', alt='Marketplace Logo', width='200', height='100')
+                h1 Your Market place
+            form
+                h2 Sign Up
+                label(for='username') Username
+                input(type='text', placeholder='Enter Username', name='username', required)
+                label(for='email') Email
+                input(type='email', placeholder='Enter Email', name='email', required)
+                label(for='password') Password
+                input(type='password', placeholder='Enter Password', name='password', required)
+                label(for='confirm-password') Confirm Password
+                input(type='password', placeholder='Confirm Password', name='confirm-password', required)
+                button(type='submit') Sign Up
+                div(style='text-align:center;')
+                    p Already have an account?
+                    a(href='login') Login
+            footer
+            p © 2023 Marketplace. All rights reserved.
+
+
+

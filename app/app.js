@@ -23,23 +23,50 @@ const db = require('./services/db');
 const { User } = require("./models/user");
 const { Property } = require("./models/property");
 
-// Create a route for root - /
 app.get("/", function(req, res) {
      // Set up an array of data
      var test_property = ['houses', 'flats', 'villas', 'appartments'];
      // Send the array through to the template as a variable called data
-     res.render("index", {'title':'My index page',
+     res.render("login", {'title':'login page',
+           'heading':'My heading', 'data':test_property});
+     res.render("signup", {'title':'signup page',
+           'heading':'My heading', 'data':test_property});
+     res.render("forgotpassword", {'title':'forgotpassword page',
            'heading':'My heading', 'data':test_property});
 });
+
+
 
 //creating home page
 app.get("/home", function(req, res) {
     //
-    res.render("index");
-    
+    res.render("login");
     //
     res.render('layout', {data:results});
 });
+
+app.get("/signup", function(req, res) {
+    //
+    res.render("signup");
+    //
+    res.render('login', {data:results});
+});
+
+app.get("/login", function(req, res) {
+    //
+    res.render("login");
+    //
+    res.render('layout', {data:results});
+});
+
+app.get("/forgotpassword", function(req, res) {
+    //
+    res.render("forgotpassword");
+    //
+    res.render('signin', {data:results});
+});
+
+
 
 // Task 2a display a formatted list of users
 app.get("/all-user-formatted", function(req, res) {
