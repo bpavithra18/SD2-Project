@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.property-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.property-details {
+    margin-bottom: 20px;
+}
+.property-details h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.property-details p {
+    margin: 0;
+}
+.property-description {
+    margin-bottom: 20px;
+}
+.property-description h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.property-description p {
+    margin: 0;
+    line-height: 1.5;
+}
+.property-price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.property-contact {
+    margin-bottom: 50px;
+}
+.property-contact h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.property-contact p {
+    margin: 0;
+    line-height: 1.5;
+}
+.property-contact a {
+    display: inline-block;
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.property-contact a:hover {
+    background-color: #005b80;
+}

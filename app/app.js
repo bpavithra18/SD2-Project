@@ -37,6 +37,8 @@ app.get("/", function(req, res) {
            'heading':'My heading', 'data':test_property});
     res.render("sell", {'title':'sell page',
            'heading':'My heading', 'data':test_property});
+    res.render("buy", {'title':'buy page',
+           'heading':'My heading', 'data':test_property});
 });
 
 
@@ -80,6 +82,13 @@ app.get("/home", function(req, res) {
 app.get("/sell", function(req, res) {
     //
     res.render("sell");
+    //
+    res.render('home', {data:results});
+});
+
+app.get("/buy", function(req, res) {
+    //
+    res.render("buy");
     //
     res.render('home', {data:results});
 });
