@@ -33,18 +33,20 @@ app.get("/", function(req, res) {
            'heading':'My heading', 'data':test_property});
      res.render("forgotpassword", {'title':'forgotpassword page',
            'heading':'My heading', 'data':test_property});
+     res.render("home", {'title':'home page',
+           'heading':'My heading', 'data':test_property});
 });
 
 
 
 //creating home page
-app.get("/home", function(req, res) {
+app.get("/main", function(req, res) {
     //
     res.render("login");
     //
     res.render('layout', {data:results});
 });
-
+//
 app.get("/signup", function(req, res) {
     //
     res.render("signup");
@@ -62,6 +64,13 @@ app.get("/login", function(req, res) {
 app.get("/forgotpassword", function(req, res) {
     //
     res.render("forgotpassword");
+    //
+    res.render('signin', {data:results});
+});
+//
+app.get("/home", function(req, res) {
+    //
+    res.render("home");
     //
     res.render('signin', {data:results});
 });
