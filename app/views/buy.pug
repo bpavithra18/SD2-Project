@@ -10,6 +10,7 @@ block buy
                 ul.property-list
                     each property in properties
                         li
+                            img.property-image(src="/images/property1.jpg", alt="Property Image")
                             .property-details
                                 div.property-id id #{property.id}
                                 div.property-type property type: #{property.property_type}
