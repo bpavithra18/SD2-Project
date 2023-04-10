@@ -64,3 +64,8 @@ h2 {
     font-size: 20px;
     margin-right: 10px;
 }
+.property-links button:hover {
+    background-color: rgb(211, 243, 132);
+    color: #e02525;
+    cursor: pointer;
+    transition: background-color 1000ms, color 1000ms;
