@@ -20,6 +20,9 @@ h1 {
     text-align: center;
     margin-top: 0;
     color: #333333;
+    background-color: rgb(201, 236, 107);
+    padding: 20px;
+    border-radius: 8px;
 }
 input[type=text], input[type=password], input[type=email] {
     width: 100%;
