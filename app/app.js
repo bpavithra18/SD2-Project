@@ -88,9 +88,11 @@ app.get("/sell", function(req, res) {
 
 app.get("/buy", function(req, res) {
     //
-    res.render("buy");
-    //
-    res.render('home', {data:results});
+    //res.render("buy");
+    var sql = 'select * from property';
+    db.query(sql).then(results => {
+        res.render('buy', {property:results});
+    });
 });
 
 
