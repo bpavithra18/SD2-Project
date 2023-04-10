@@ -7,7 +7,7 @@ block sell
         body
             .container    
                 h1 Sell Your Property
-                form(action="submit-form.php", method="post")
+                form(action="/submit-form", method="post")
                     label(for="property-type") Property Type:
                     select#property-type(name="property-type")
                         option(value="house") House

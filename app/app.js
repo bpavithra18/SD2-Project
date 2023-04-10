@@ -1,10 +1,18 @@
 // Import express.js
 const express = require("express");
 
+//
+const bodyParser = require('body-parser');
+
+//
+//const multer = require('multer');
+//const path = require('path');
+
 // Create express app
 var app = express();
 
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Add static files location
 app.use(express.static("static"));
@@ -86,12 +94,36 @@ app.get("/sell", function(req, res) {
     res.render('home', {data:results});
 });
 
+// Handle form submission
+app.post('/submit-form', (req, res) => {
+    const propertyType = req.body['property-type'];
+    const bedrooms = req.body.bedrooms;
+    const bathrooms = req.body.bathrooms;
+    const price = req.body.price;
+    const description = req.body.description;
+    const contactName = req.body['contact-name'];
+    const contactEmail = req.body['contact-email'];
+    const contactPhone = req.body['contact-phone'];
+    const image = req.body['property-image'];
+  
+    const sql = `INSERT INTO properties (property_type, bedrooms, bathrooms, price, description, contact_name, contact_email, contact_phone, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    const values = [propertyType, bedrooms, bathrooms, price, description, contactName, contactEmail, contactPhone, image];
+  
+    db.query(sql, values, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.log('Data inserted');
+      res.redirect('/');
+    });
+  });
+
 app.get("/buy", function(req, res) {
     //
     //res.render("buy");
-    var sql = 'select * from property';
+    var sql = 'select * from properties';
     db.query(sql).then(results => {
-        res.render('buy', {property:results});
+        res.render('buy', {properties:results});
     });
 });
 
@@ -139,6 +171,7 @@ app.get("/property-single/:id", async function (req, res) {
     res.render('property', {property:property});
 
 });
+
 
 
 // Start server on port 3000

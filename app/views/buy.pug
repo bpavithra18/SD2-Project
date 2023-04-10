@@ -5,16 +5,16 @@ block buy
         head 
             title Property For Sale
         body
-            .container
+            .container1
                 h1 Properties for Sale
                 ul.property-list
-                    each properties in property
+                    each property in properties
                         li
-                            img.property-image(src="/images/property1.jpg", alt="Property Image")
                             .property-details
-                                div.property-title #{properties.id}
-                                div.property-price #{properties.cost}
-                                div.property-description #{properties.category}
-                                div.property-location #{properties.location}
+                                div.property-id id #{property.id}
+                                div.property-type property type: #{property.property_type}
+                                div.property-bedrooms bedrooms: #{property.bedrooms}
+                                div.property-bathrooms bathrooms: #{property.bathrooms}
+                                div.property-price price: #{property.price}
                     
 //- Add more properties here
