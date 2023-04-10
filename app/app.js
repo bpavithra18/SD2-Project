@@ -35,6 +35,8 @@ app.get("/", function(req, res) {
            'heading':'My heading', 'data':test_property});
      res.render("home", {'title':'home page',
            'heading':'My heading', 'data':test_property});
+    res.render("sell", {'title':'sell page',
+           'heading':'My heading', 'data':test_property});
 });
 
 
@@ -73,6 +75,13 @@ app.get("/home", function(req, res) {
     res.render("home");
     //
     res.render('signin', {data:results});
+});
+
+app.get("/sell", function(req, res) {
+    //
+    res.render("sell");
+    //
+    res.render('home', {data:results});
 });
 
 
