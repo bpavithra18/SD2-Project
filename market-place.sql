@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Apr 08, 2023 at 10:57 PM
+-- Generation Time: Apr 17, 2023 at 10:29 AM
 -- Server version: 8.0.32
 -- PHP Version: 8.1.15
 
@@ -20,6 +20,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `market-place`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `properties`
+--
+
+CREATE TABLE `properties` (
+  `id` int NOT NULL,
+  `property_type` varchar(255) DEFAULT NULL,
+  `bedrooms` int DEFAULT NULL,
+  `bathrooms` int DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `description` text,
+  `contact_name` varchar(255) DEFAULT NULL,
+  `contact_email` varchar(255) DEFAULT NULL,
+  `contact_phone` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `properties`
+--
+
+INSERT INTO `properties` (`id`, `property_type`, `bedrooms`, `bathrooms`, `price`, `description`, `contact_name`, `contact_email`, `contact_phone`, `image`) VALUES
+(1, 'house', 1, 1, 2000.00, 'well furnitured', 'yk', 'yk@gmail.com', '07867239283', 'property1.jpg'),
+(2, 'house', 2, 1, 2000.00, 'home', 'kishore', 'yk@gmail.com', '07867239283', 'property1.jpg'),
+(3, 'house', 3, 1, 2000.00, 'home', 'kishore', 'yk@gmail.com', '07867239283', 'property1.jpg'),
+(4, 'apartment', 3, 2, 100000.00, 'revanths villa', 'revanth', 'rv@gmail.com', '07867239228', 'property1.jpg');
 
 -- --------------------------------------------------------
 
@@ -75,6 +104,12 @@ INSERT INTO `users` (`id`, `name`, `phone`, `email`, `address`, `psd`, `dob`, `g
 --
 
 --
+-- Indexes for table `properties`
+--
+ALTER TABLE `properties`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `property`
 --
 ALTER TABLE `property`
@@ -85,6 +120,16 @@ ALTER TABLE `property`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `properties`
+--
+ALTER TABLE `properties`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
