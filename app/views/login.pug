@@ -12,9 +12,9 @@ block signin
                 br
                 | Your Marketplace
 
-            form
+            form(action='/authenticate' method='POST')
                 h2 Login
-                label(for="username") Username
+                label(for="email") Username
                 input(type="text", placeholder="Enter Username", name="username", required)
                 label(for="password") Password
                 input(type="password", placeholder="Enter Password", name="password", required)

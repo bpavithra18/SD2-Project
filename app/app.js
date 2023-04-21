@@ -101,6 +101,32 @@ app.get("/login", function(req, res) {
     res.render('layout', {data:results});
 });
 
+// Check submitted email and password pair
+app.post('/authenticate', function (req, res) {
+    params = req.body;
+    var credentials = new Credentials(params.email);
+    try {
+        credentials.getIdFromEmail().then(cId => {
+            if (cId) {
+                credentials.authenticate(params.password).then(match => {
+                    if (match) {
+                        res.redirect('/home');
+                    }
+                    else {
+                        // TODO improve the user journey here
+                        res.send('invalid password');
+                    }
+                });
+            }
+            else {
+                res.send('invalid email');
+            }
+        })
+    } catch (err) {
+        console.error('Error while comparing ', err.message);
+    }
+});
+
 app.get("/forgotpassword", function(req, res) {
     //
     res.render("forgotpassword");
