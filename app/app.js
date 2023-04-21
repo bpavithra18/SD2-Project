@@ -73,20 +73,25 @@ app.post('/set-password', async function (req, res) {
     params = req.body;
     var credentials = new Credentials(params.email);
     try {
-        cId = await credentials.getIdFromEmail();
-        if (cId) {
-            // If a valid, existing user is found, set the password and redirect to the users single-student page
-            await credentials.setUserPassword(params.password);
-            res.redirect('/login');
-        }
-        else {
-            // If no existing user is found, add a new one
-            newId = await user.addUser(params.email);
-            res.send('Perhaps a page where a new user sets a programme would be good here');
-        }
-    } catch (err) {
-        console.error(`Error while adding password `, err.message);
-    }
+        credentials.getIdFromEmail().then( cId => {
+            if (cId) {
+                 // If a valid, existing user is found, set the password and redirect to the users single-student page
+                credentials.setUserPassword(params.password).then ( result => {
+                    res.send('Perhaps a page where a new user sets a programme would be good here');
+                    
+                });
+            }
+            else {
+                 // If no existing user is found, add a new one
+                credentials.addUser(params.email).then( Promise => {
+                    res.redirect('/login');
+                    
+                });
+            }
+        });
+     } catch (err) {
+        console.error('Error while adding password ', err.message);
+     }
 });
 
 app.get("/login", function(req, res) {
