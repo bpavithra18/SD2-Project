@@ -149,6 +149,25 @@ app.get("/about", function(req, res) {
 
 });
 
+app.get("/blog", function(req, res) {
+    //
+    res.render("blog");
+
+});
+
+app.get("/reviews", function(req, res) {
+    //
+    res.render("reviews");
+
+});
+
+app.get("/contact", function(req, res) {
+    //
+    res.render("contact");
+
+});
+
+
 app.get("/sell", function(req, res) {
     //
     res.render("sell");

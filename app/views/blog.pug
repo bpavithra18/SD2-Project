@@ -1,0 +1,26 @@
+extends layout
+block blog
+    doctype html
+    html
+        head
+            title Marketplace
+        body
+            header
+                img(src="/images/logo.jpg", alt='Marketplace Logo')
+                nav
+                    a(href='/home') Home
+                    a(href='/about') About
+                    a(href='/blog') Blog
+                    a(href='/reviews') Reviews
+                    a(href='/contact') Contact Us
+                    a(href='#') Profile
+            .section
+                h2 Blog
+                p Check out our latest blog posts for tips and advice on buying, selling, and renting properties.
+                ul
+                    li
+                        a(href='https://www.youtube.com/watch?v=rgMoeXghOWk') 5 Tips for Staging Your Home to Sell
+                    li
+                        a(href='https://www.thetimes.co.uk/money-mentor/article/rent-buy-which-best/') The Pros and Cons of Renting vs. Buying
+                    li
+                        a(href='https://www.movewise.co.uk/articles/complete-guide-best-estate-agent') How to Choose the Right Real Estate Agent
