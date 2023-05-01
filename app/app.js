@@ -48,6 +48,8 @@ app.get("/", function(req, res) {
            'heading':'My heading', 'data':test_property});
      res.render("buy", {'title':'buy page',
            'heading':'My heading', 'data':test_property});
+     res.render("about", {'title':'About page',
+           'heading':'My heading', 'data':test_property});
 });
 
 
@@ -98,7 +100,7 @@ app.get("/login", function(req, res) {
     //
     res.render("login");
     //
-    res.render('layout', {data:results});
+    //res.render('layout', {data:results});
 });
 
 // Check submitted email and password pair
@@ -139,6 +141,12 @@ app.get("/home", function(req, res) {
     res.render("home");
     //
     res.render('signin', {data:results});
+});
+
+app.get("/about", function(req, res) {
+    //
+    res.render("about");
+
 });
 
 app.get("/sell", function(req, res) {

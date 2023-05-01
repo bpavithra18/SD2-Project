@@ -56,10 +56,10 @@ class Credentials {
         const result = await db.query(sql, [this.id]);
         const match = await bcrypt.compare(submitted, result[0].password);
         if (match == true) {
-            return true;
+            return false;
         }
         else {
-            return false;
+            return true;
         }
 
     }
