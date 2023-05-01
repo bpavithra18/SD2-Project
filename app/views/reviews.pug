@@ -1,0 +1,39 @@
+extends layout
+block reviews
+    doctype html
+    html
+        head
+            title Marketplace
+        body
+            header
+                img(src="/images/logo.jpg", alt='Marketplace Logo')
+                nav
+                    a(href='/home') Home
+                    a(href='/about') About
+                    a(href='/blog') Blog
+                    a(href='/reviews') Reviews
+                    a(href='/contact') Contact Us
+                    a(href='#') Profile
+                h2 Reviews
+            .review
+                .review-header
+                    h3 John Doe
+                    span.review-date May 1, 2023
+                .review-rating
+                    span.star-icon ★
+                    span.star-icon ★
+                    span.star-icon ★
+                    span.star-icon ★
+                    span.star-icon ★
+                p.review-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor quam non odio congue ultricies. Integer id neque vel turpis laoreet efficitur. Sed eget semper orci, vel efficitur risus.
+            .review
+                .review-header
+                    h3 Jane Smith
+                    span.review-date April 29, 2023
+                .review-rating
+                    span.star-icon ★
+                    span.star-icon ★
+                    span.star-icon ★
+                    span.star-icon ★
+                    span.star-icon ☆
+                p.review-text Nullam scelerisque tellus ut odio aliquam, eget bibendum neque commodo. Duis et finibus lectus, vel interdum quam. Morbi mollis sapien id turpis ullamcorper commodo.

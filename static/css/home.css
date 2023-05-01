@@ -69,3 +69,38 @@ h2 {
     color: #e02525;
     cursor: pointer;
     transition: background-color 1000ms, color 1000ms;
+}
+.review {
+    flex-basis: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+.review-header h3 {
+    margin: 0;
+  }
+  
+.review-date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+.review-rating {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+.review-text {
+    margin: 0;
+  }
+  
