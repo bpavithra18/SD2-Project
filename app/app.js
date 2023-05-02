@@ -38,18 +38,6 @@ app.get("/", function(req, res) {
      // Send the array through to the template as a variable called data
      res.render("login", {'title':'login page',
            'heading':'My heading', 'data':test_property});
-     res.render("signup", {'title':'signup page',
-           'heading':'My heading', 'data':test_property});
-     res.render("forgotpassword", {'title':'forgotpassword page',
-           'heading':'My heading', 'data':test_property});
-     res.render("home", {'title':'home page',
-           'heading':'My heading', 'data':test_property});
-     res.render("sell", {'title':'sell page',
-           'heading':'My heading', 'data':test_property});
-     res.render("buy", {'title':'buy page',
-           'heading':'My heading', 'data':test_property});
-     res.render("about", {'title':'About page',
-           'heading':'My heading', 'data':test_property});
 });
 
 
@@ -111,6 +99,7 @@ app.post('/authenticate', function (req, res) {
         credentials.getIdFromEmail().then(cId => {
             if (cId) {
                 credentials.authenticate(params.password).then(match => {
+                    console.log(match);
                     if (match) {
                         res.redirect('/home');
                     }
