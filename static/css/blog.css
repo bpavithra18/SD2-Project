@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #fff; */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+body {
+    background-image: url('https://wallpaperaccess.com/full/2056374.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #1abc9c;
+}
