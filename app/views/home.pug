@@ -2,32 +2,70 @@ extends layout
 block home
     doctype html
     html
-        head
-            title Marketplace
-        body
-            header
-                img(src="/images/logo.jpg", alt='Marketplace Logo')
-                nav
-                    a(href='/home') Home
-                    a(href='/about') About
-                    a(href='/blog') Blog
-                    a(href='/reviews') Reviews
-                    a(href='/contact') Contact Us
-            .property-links
-                button
-                    a(href='sell') SELL
-                button
-                    a(href='buy') BUY/RENT
-            .section
-                h2 About Us
-                p We are a real estate website dedicated to helping people find their dream homes. With our easy-to-use search tools and comprehensive listings, we make it simple to find the perfect property for your needs.
-            .section
-                h2 Blog
-                p Check out our latest blog posts for tips and advice on buying, selling, and renting properties.
-                ul
-                    li
-                        a(href='https://www.youtube.com/watch?v=rgMoeXghOWk') 5 Tips for Staging Your Home to Sell
-                    li
-                        a(href='https://www.thetimes.co.uk/money-mentor/article/rent-buy-which-best/') The Pros and Cons of Renting vs. Buying
-                    li
-                        a(href='https://www.movewise.co.uk/articles/complete-guide-best-estate-agent') How to Choose the Right Real Estate Agent
+    head
+        title Marketplace
+        link(rel="stylesheet", href="/css/home.css")
+    body
+        header
+            img(src='/images/logophoto.png', alt='Marketplace Logo', height='100')
+            nav
+                a(href='/home') Home
+                a(href='/about') About
+                a(href='/blog') Blog
+                a(href='/reviews') Reviews
+                a(href='/contact') Contact Us
+        .hero-section
+            h1 Find Your Dream Home Today
+            form(action="/search", method="GET")
+                input(type="text", name="search", placeholder="Enter location or property type")
+                button(type="submit") Search
+        .property-links
+            button
+                a(href='sell') SELL YOUR PROPERTY
+            button
+                a(href='buy') BUY/RENT A PROPERTY
+        .about-us.section
+            h2 About Us
+            p We are a real estate website dedicated to helping people find their dream homes. With our easy-to-use search tools and comprehensive listings, we make it simple to find the perfect property for your needs.
+        .featured-properties.section
+            h2 Featured Properties
+            .property-card-wrapper
+                .property-card
+                    img(src="/images/property1.jpg", alt="Property Image")
+                    h3 Beautiful 4 Bedroom House in Prime Location
+                    p $500,000
+                    button
+                        a(href='/properties/1') View Property
+                .property-card
+                    img(src="/images/property1.jpg", alt="Property Image")
+                    h3 Spacious 2 Bedroom Apartment with Stunning Views
+                    p $300,000
+                    button
+                        a(href='/properties/1') View Property
+                .property-card
+                    img(src="/images/property1.jpg", alt="Property Image")
+                    h3 Cozy 1 Bedroom Flat in Quiet Neighborhood
+                    p $150,000
+                    button
+                        a(href='/properties/1') View Property
+        .blog-posts.section
+            h2 Latest Blog Posts
+            .blog-post-wrapper
+                .blog-post
+                    img(src="/images/blog1.png", alt="Blog Post Image")
+                    h3 5 Tips for Staging Your Home to Sell
+                    p By John Smith on May 1, 2023
+                    button
+                        a(href='https://www.youtube.com/watch?v=rgMoeXghOWk') Read More
+                .blog-post
+                    img(src="/images/blog2.png", alt="Blog Post Image")
+                    h3 The Pros and Cons of Renting vs. Buying
+                    p By Jane Doe on April 25, 2023
+                    button
+                        a(href='https://www.thetimes.co.uk/money-mentor/article/rent-buy-which-best/') Read More
+                .blog-post
+                    img(src="/images/blog3.jpg", alt="Blog Post Image")
+                    h3 How to Choose the Right Property
+                    p By Tom Johnson on April 18, 2023
+                    button
+                        a(href='https://www.movewise.co.uk/articles/complete-guide-best-estate-agent') Read More
