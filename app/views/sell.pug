@@ -2,30 +2,39 @@ extends layout
 block sell
     doctype html
     html
-        head
-            title Sell Your Property
-        body
-            .container    
-                h1 Sell Your Property
-                form(action="/submit-form", method="post")
-                    label(for="property-type") Property Type:
-                    select#property-type(name="property-type")
-                        option(value="house") House
-                        option(value="apartment") Apartment
-                    label(for="bedrooms") Number of Bedrooms:
-                    input#bedrooms(type="number", name="bedrooms")
-                    label(for="bathrooms") Number of Bathrooms:
-                    input#bathrooms(type="number", name="bathrooms")
-                    label(for="price") Asking Price:
-                    input#price(type="number", name="price")
-                    label(for="description") Property Description:
-                    textarea#description(name="description", rows="5", cols="50")
-                    label(for="contact-name") Your Name:
-                    input#contact-name(type="text", name="contact-name")
-                    label(for="contact-email") Your Email:
-                    input#contact-email(type="email", name="contact-email")
-                    label(for="contact-phone") Your Phone Number:
-                    input#contact-phone(type="tel", name="contact-phone")
-                    label(for="property-image") Upload Property Image:
-                    input#upload-image(type="file", name="property-image")
-                    input(type="submit", value="Submit")
+    head
+        title Sell Your Property
+        link(rel="stylesheet", href="/css/sell.css")
+    body
+        header
+            img(src='/images/logophoto.png', alt='Marketplace Logo', height='100')
+            nav
+                a(href='/home') Home
+                a(href='/about') About
+                a(href='/blog') Blog
+                a(href='/reviews') Reviews
+                a(href='/contact') Contact Us
+        .container    
+            h1 Sell Your Property
+            form(action="/submit-form", method="post")
+                label(for="property-type") Property Type:
+                select#property-type(name="property-type")
+                    option(value="house") House
+                    option(value="apartment") Apartment
+                label(for="bedrooms") Number of Bedrooms:
+                input#bedrooms(type="number", name="bedrooms")
+                label(for="bathrooms") Number of Bathrooms:
+                input#bathrooms(type="number", name="bathrooms")
+                label(for="price") Asking Price:
+                input#price(type="number", name="price")
+                label(for="description") Property Description:
+                textarea#description(name="description", rows="5", cols="50")
+                label(for="contact-name") Your Name:
+                input#contact-name(type="text", name="contact-name")
+                label(for="contact-email") Your Email:
+                input#contact-email(type="email", name="contact-email")
+                label(for="contact-phone") Your Phone Number:
+                input#contact-phone(type="tel", name="contact-phone")
+                label(for="property-image") Upload Property Image:
+                input#upload-image(type="file", name="property-image")
+                input(type="submit", value="Submit")
