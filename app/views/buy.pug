@@ -2,21 +2,29 @@ extends layout
 block buy
     doctype html
     html 
-        head 
-            title Property For Sale
-            link(rel="stylesheet", href="/css/buy.css")
-        body
-            .container1
-                h1 Properties for Sale
-                ul.property-list
-                    each property in properties
-                        li
-                            img.property-image(src="/images/property1.jpg", alt="Property Image")
-                            .property-details
-                                div.property-id id #{property.id}
-                                div.property-type property type: #{property.property_type}
-                                div.property-bedrooms bedrooms: #{property.bedrooms}
-                                div.property-bathrooms bathrooms: #{property.bathrooms}
-                                div.property-price price: #{property.price}
+    head 
+        title Property For Sale
+        link(rel="stylesheet", href="/css/buy.css")
+    body
+        header
+            img(src='/images/logophoto.png', alt='Marketplace Logo', height='100')
+            nav
+                a(href='/home') Home
+                a(href='/about') About
+                a(href='/blog') Blog
+                a(href='/reviews') Reviews
+                a(href='/contact') Contact Us
+        .container1
+            h1 Properties for Sale
+            ul.property-list
+                each property in properties
+                    li
+                        img.property-image(src="/images/property1.jpg", alt="Property Image")
+                        .property-details
+                            div.property-id id #{property.id}
+                            div.property-type property type: #{property.property_type}
+                            div.property-bedrooms bedrooms: #{property.bedrooms}
+                            div.property-bathrooms bathrooms: #{property.bathrooms}
+                            div.property-price price: #{property.price}
                     
 //- Add more properties here
