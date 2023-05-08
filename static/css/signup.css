@@ -1,10 +1,9 @@
 body {
-    background-image: url('https://1.bp.blogspot.com/-JZUpRvRdC0c/WmSCHgN7ikI/AAAAAAAANag/c4V4XRZjj9gji2i9QfqNxHY4_1C33yxMACLcBGAs/s1600/White%2BHome%2BFacade%2Bwith%2BConcrete%252C%2BWood%2Band%2BGlass%2BDetails%2B1.jpg');
+    background-image: url('https://wallpaperaccess.com/full/2056374.jpg');
     height: 100%;
     background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
 }
 form {
@@ -16,11 +15,18 @@ form {
     margin: auto;
     margin-top: 100px;
 }
-body header h1 {
+body header img {
     text-align: center;
     margin-top: 0;
     color: #333333;
-    background-color: rgb(201, 236, 107);
+    padding: 20px;
+    border-radius: 8px;
+}
+body header h1{
+    text-align: center;
+    margin-top: 0;
+    color: #ffffff;
+    background-color: rgba(201, 236, 107, 0);
     padding: 20px;
     border-radius: 8px;
 }

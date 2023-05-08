@@ -5,12 +5,9 @@ block login
         head
             title Login Page
         body
-            img(src="/images/logo.png", alt="Marketplace Logo", width="200", height="100")
-            h1 Welcome
-                br
-                | To
-                br
-                | Your Marketplace
+            header
+                img(src="/images/logo1.png", alt="Marketplace Logo")
+                h1 Your Market place
 
             form(action='/authenticate' method='POST')
                 h2 Login
