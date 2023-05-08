@@ -4,10 +4,12 @@ block signup
     html
         head
             title Sign Up Page
+            link(rel="stylesheet", href="/css/signup.css")
         body
             header
-                img(src='/images/logo1.png', alt='Marketplace Logo', width='200', height='100')
+                img(src='/images/logophoto.png', alt='Marketplace Logo', height='100')
                 h1 Your Market place
+
             form(action='/set-password' method='POST')
                 label(for='username') Username
                 input(type='text', placeholder='Enter Username', name='username', required)
@@ -22,7 +24,7 @@ block signup
                     p Already have an account?
                     a(href='login') Login
             footer
-            p © 2023 Marketplace. All rights reserved.
+                p © 2023 Marketplace. All rights reserved.
 
 
 
