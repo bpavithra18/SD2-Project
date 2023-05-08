@@ -32,6 +32,16 @@ const { User } = require("./models/user");
 const { Property } = require("./models/property");
 const { Credentials } = require("./models/credentials");
 
+// Set the sessions
+var session = require('express-session');
+app.use(session({
+  secret: 'secretkeysdfjsflyoifasd',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
+
+
 app.get("/", function(req, res) {
      // Set up an array of data
      var test_property = ['houses', 'flats', 'villas', 'appartments'];
@@ -101,6 +111,9 @@ app.post('/authenticate', function (req, res) {
                 credentials.authenticate(params.password).then(match => {
                     console.log(match);
                     if (match) {
+                        req.session.uid = uId;
+                        req.session.loggedIn = true;
+                        console.log(req.session);
                         res.redirect('/home');
                     }
                     else {
