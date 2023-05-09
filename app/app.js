@@ -51,15 +51,6 @@ app.get("/", function(req, res) {
 });
 
 
-
-//creating home page
-app.get("/main", function(req, res) {
-    //
-    res.render("login");
-    //
-    res.render('layout', {data:results});
-});
-
 //
 app.get("/signup", function(req, res) {
     //
@@ -111,10 +102,10 @@ app.post('/authenticate', function (req, res) {
                 credentials.authenticate(params.password).then(match => {
                     console.log(match);
                     if (match) {
-                        req.session.uid = uId;
-                        req.session.loggedIn = true;
-                        console.log(req.session);
                         res.redirect('/home');
+                        req.session.cid = cId;
+                        req.session.loggedIn = true;
+                        console.log(req.session); 
                     }
                     else {
                         // TODO improve the user journey here
@@ -139,10 +130,10 @@ app.get("/forgotpassword", function(req, res) {
 });
 //
 app.get("/home", function(req, res) {
-    //
+    
     res.render("home");
     //
-    res.render('signin', {data:results});
+    //res.render('signin', {data:results});
 });
 
 app.get("/about", function(req, res) {
@@ -174,7 +165,7 @@ app.get("/sell", function(req, res) {
     //
     res.render("sell");
     //
-    res.render('home', {data:results});
+    //res.render('home', {data:results});
 });
 
 // Handle form submission
@@ -202,8 +193,7 @@ app.post('/submit-form', (req, res) => {
   });
 
 app.get("/buy", function(req, res) {
-    //
-    //res.render("buy");
+    
     var sql = 'select * from properties';
     db.query(sql).then(results => {
         res.render('buy', {properties:results});

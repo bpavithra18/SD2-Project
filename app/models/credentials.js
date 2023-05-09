@@ -1,6 +1,6 @@
 // Get the functions in the db.js file to use
 const db = require('../services/db');
-const bcrypt = require("bcryptjs");
+var bcrypt = require("bcryptjs");
 
 class Credentials {
 
@@ -55,10 +55,12 @@ class Credentials {
         var sql = "SELECT password FROM Credentials WHERE id = ?";
         console.log(this.id);
         const result = await db.query(sql, [this.id]);
-        //console.log(result);
+        console.log(result);
         const match = await bcrypt.compare(submitted, result[0].password);
+        console.log(match);
         console.log(submitted);
-        if (match === true) {
+        console.log(result[0].password);
+        if (match == false) {
             return true;
         }
         else {
