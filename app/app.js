@@ -122,6 +122,12 @@ app.post('/authenticate', function (req, res) {
     }
 });
 
+// Logout
+app.get('/logout', function (req, res) {
+    req.session.destroy();
+    res.redirect('/login');
+  });
+
 app.get("/forgotpassword", function(req, res) {
     //
     res.render("forgotpassword");
