@@ -55,8 +55,7 @@ app.get("/", function(req, res) {
 app.get("/signup", function(req, res) {
     //
     res.render("signup");
-    //
-    //res.render('login', {data:results});
+    
 });
 
 //set password
@@ -88,8 +87,7 @@ app.post('/set-password', async function (req, res) {
 app.get("/login", function(req, res) {
     //
     res.render("login");
-    //
-    //res.render('layout', {data:results});
+    
 });
 
 // Check submitted email and password pair
@@ -131,15 +129,13 @@ app.get('/logout', function (req, res) {
 app.get("/forgotpassword", function(req, res) {
     //
     res.render("forgotpassword");
-    //
-    res.render('signin', {data:results});
+   
 });
 //
 app.get("/home", function(req, res) {
     
     res.render("home");
-    //
-    //res.render('signin', {data:results});
+    
 });
 
 app.get("/about", function(req, res) {
@@ -170,8 +166,7 @@ app.get("/contact", function(req, res) {
 app.get("/sell", function(req, res) {
     //
     res.render("sell");
-    //
-    //res.render('home', {data:results});
+    
 });
 
 // Handle form submission
