@@ -4,7 +4,7 @@ header {
     align-items: center;
     padding: 20px;
     /* background-color: #fff; */
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0);
 }
 body {
     background-image: url('https://wallpaperaccess.com/full/2056374.jpg');
@@ -29,4 +29,64 @@ nav a {
 
 nav a:hover {
     color: #1abc9c;
+}
+
+.blog-posts {
+    background-color: #ffffff00;
+    padding: 50px;
+}
+    
+.blog-posts h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+    
+.blog-post-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.blog-post {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    width: 30%;
+    max-width: 350px;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.blog-post h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.blog-post button {
+    display: block;
+    background-color: #0275d8;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post button:hover {
+    background-color: #01509e;
 }

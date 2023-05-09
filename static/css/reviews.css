@@ -1,0 +1,73 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #fff; */
+    box-shadow: 0 0 5px rgba(0,0,0,0);
+}
+body {
+    background-image: url('https://wallpaperaccess.com/full/2056374.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #1abc9c;
+}
+  
+  /* Style for reviews section */
+.section  {
+    background-color: #f9f9f9b7;
+    padding: 50px;
+}
+
+  /* .section {
+    padding: 2rem;
+  } */
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .review-date {
+    font-size: 0.8rem;
+    color: #777;
+    margin-left: 1rem;
+  }
+  
+  .review-rating {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .star-icon {
+    color: #f2c94c;
+    font-size: 1.2rem;
+  }
+  
+  .review-text {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+  }
+  
