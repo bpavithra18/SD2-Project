@@ -22,9 +22,12 @@ block buy
                         img.property-image(src="/images/property1.jpg", alt="Property Image")
                         .property-details
                             div.property-id id #{property.id}
-                            div.property-type property type: #{property.property_type}
-                            div.property-bedrooms bedrooms: #{property.bedrooms}
-                            div.property-bathrooms bathrooms: #{property.bathrooms}
-                            div.property-price price: #{property.price}
-                    
-//- Add more properties here
+                            div.property-type Property type: #{property.property_type}
+                            div.property-bedrooms Number of Bedrooms: #{property.bedrooms}
+                            div.property-bathrooms Number of Bathrooms: #{property.bathrooms}
+                            div.property-owner Owner: #{property.contact_name}
+                            div.property-owner Owner Phone No: #{property.contact_phone}
+                            div.property-owner Owner Email: #{property.contact_email}
+                            div.property-price Price £: #{property.price}
+            footer
+                p &copy; 2023 Marketplace. All rights reserved.
