@@ -4,9 +4,6 @@ const express = require("express");
 //
 const bodyParser = require('body-parser');
 
-//
-//const multer = require('multer');
-//const path = require('path');
 
 // Create express app
 var app = express();
@@ -51,9 +48,9 @@ app.get("/", function(req, res) {
 });
 
 
-//
+
 app.get("/signup", function(req, res) {
-    //
+
     res.render("signup");
     
 });
