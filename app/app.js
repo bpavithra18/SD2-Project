@@ -113,7 +113,7 @@ app.post('/authenticate', function (req, res) {
             }
         })
     } catch (err) {
-        console.error('Error while comparing ', err.message);
+        console.error('Error while we comparing ', err.message);
     }
 });
 
